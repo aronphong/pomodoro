@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+
         <title>Pomodoro Technique</title>
     </head>
 
@@ -8,16 +12,28 @@
         <div id="main">
             <h1>Pomodoro Technique</h1>
 
-            <button id="start"> Start</button>
-            <p id="focusTime" value="0" >25</p> 
+            <div>
+                <div id="focus">
+                    <label for="focusTime">Focus</label>
+                    <p id="focusTime" value="0" >25</p> 
+                </div>
 
-            <button id="increase">up</button> 
-            <button id="decrease">down</button>
+                <div id="break">
+                    <label for="breakTime">Break</label>
+                    <p id="breakTime">5</p>
+                    <button id="increaseBreak" class="buttonControls">up</button> 
+                    <button id="decreaseBreak" class="buttonControls">down</button>
+                </div>
+            </div>
+            <button id="increase" class="buttonControls">up</button> 
+            <button id="decrease" class="buttonControls">down</button>
             <br>
             <br>
             <p id="displayCountDown">25:00</p>
-            <button> Pause</button>
-            <button id="resetTimer"> Reset</button>
+            
+            <button id="startTimer" class="buttonControls">Start</button>
+            <button id="pauseTimer" class="buttonControls">Pause</button>
+            <button id="resetTimer" class="buttonControls">Reset</button>
 
         </div>
 
