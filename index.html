@@ -4,37 +4,36 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <title>Pomodoro Technique</title>
     </head>
 
     <body>
+        <h1>Pomodoro Technique</h1>
         <div id="main">
-            <h1>Pomodoro Technique</h1>
-
-            <div>
                 <div id="focus">
                     <label for="focusTime">Focus</label>
-                    <p id="focusTime" value="0" >25</p> 
+                    <p id="focusTime" value="0" >25</p>
+                    <button id="increase" class="fa fa-arrow-up buttonControls"></button> 
+                    <button id="decrease" class="fa fa-arrow-down buttonControls"></button> 
                 </div>
 
                 <div id="break">
                     <label for="breakTime">Break</label>
                     <p id="breakTime">5</p>
-                    <button id="increaseBreak" class="buttonControls">up</button> 
-                    <button id="decreaseBreak" class="buttonControls">down</button>
+                    <button id="increaseBreak" class="fa fa-arrow-up buttonControls"></button> 
+                    <button id="decreaseBreak" class="fa fa-arrow-down buttonControls"></button>
                 </div>
-            </div>
-            <button id="increase" class="buttonControls">up</button> 
-            <button id="decrease" class="buttonControls">down</button>
-            <br>
-            <br>
+
+            <div id="display">
+            <label for="displayCountDown">Session</label>
             <p id="displayCountDown">25:00</p>
             
-            <button id="startTimer" class="buttonControls">Start</button>
-            <button id="pauseTimer" class="buttonControls">Pause</button>
-            <button id="resetTimer" class="buttonControls">Reset</button>
-
+            <button id="startTimer" class="fa fa-angle-right buttonControls"></button>
+            <button id="pauseTimer" class="fa fa-pause-circle-o buttonControls"></button>
+            <button id="resetTimer" class="fa fa-square buttonControls"></button>
+             </div>
         </div>
 
         <script src="pomodoro.js"></script>
