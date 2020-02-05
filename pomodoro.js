@@ -9,7 +9,7 @@ function startTimer (duration, display) {
     let minutes = 0;
     let seconds = 0;
     // let breakStatus = false;
-
+    sessionText.textContent = "Focus";
     // check pause status
     if (pause == 0) {
         timer = duration*60;
@@ -22,6 +22,7 @@ function startTimer (duration, display) {
 
     if (breakStatus == true) {
         console.log("yes");
+        sessionText.textContent="Break";
         timer = duration*60;
         counter = undefined;
     }
@@ -43,6 +44,7 @@ function startTimer (duration, display) {
                 breakStatus = true;
                 console.log(breakStatus);
                 startTimer(breakTime.textContent,display);
+                breakStatus = false;
                 return breakStatus
             }
         }, 1000);
@@ -62,6 +64,7 @@ function pauseTimer() {
 function resetTimer() {
     clearInterval(counter);
     counter = undefined;
+    breakStatus = false;
     pause = 0;
     pausedTime = 0;
     displayCountDown.textContent = `${pomodoroTime.textContent}:00`;
@@ -70,7 +73,7 @@ function resetTimer() {
 const pomodoroTime = document.querySelector("#focusTime");
 const breakTime = document.querySelector("#breakTime");
 const displayCountDown = document.querySelector("#displayCountDown");
-
+const sessionText = document.querySelector("#sessionText")
 
 // event listeners for controls
 const startButton = document.querySelector("#startTimer");
